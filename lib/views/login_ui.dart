@@ -138,40 +138,146 @@ class _LoginUIState extends State<LoginUI> {
                 ),
                 child: TextField(
                   decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1.0,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 1.0,
+                          color: Color(0xFF101276),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 1.0,
+                          color: Color(0xFF101276),
+                        ),
+                      ),
+                      labelText: "รหัสผ่าน",
+                      labelStyle: TextStyle(
+                        fontFamily: "Kanit",
                         color: Color(0xFF101276),
                       ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1.0,
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      hintText: "ไม่ต่ำกว่า 6 ตัวอักษร",
+                      hintStyle: TextStyle(
+                        fontFamily: "Kanit",
+                        color: Colors.grey[350],
+                        fontStyle: FontStyle.italic,
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock,
                         color: Color(0xFF101276),
                       ),
-                    ),
-                    labelText: "รหัสผ่าน",
-                    labelStyle: TextStyle(
-                      fontFamily: "Kanit",
-                      color: Color(0xFF101276),
-                    ),
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    hintText: "ไม่ต่ำกว่า 6 ตัวอักษร",
-                    hintStyle: TextStyle(
-                      fontFamily: "Kanit",
-                      color: Colors.grey[350],
-                      fontStyle: FontStyle.italic,
-                    ),
-                    prefixIcon: Icon(
-                      Icons.lock,
-                      color: Color(0xFF101276),
-                    ),
-                    suffixIcon: Icon(
-                      Icons.visibility_off,
-                      color: Colors.grey,
-                    )
-                  ),
+                      suffixIcon: Icon(
+                        Icons.visibility_off,
+                        color: Colors.grey,
+                      )),
                   obscureText: true,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                  top: 10.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "ลงทะเบียน",
+                          style: TextStyle(
+                            fontFamily: "Kanit",
+                            color: Color(0xFF101276),
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerLeft,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "ลืมรหัสผ่าน",
+                          style: TextStyle(
+                            fontFamily: "Kanit",
+                            color: Colors.red,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerRight,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                ),
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "เข้าใช้งาน",
+                    style: TextStyle(
+                      fontFamily: "Kanit",
+                      color: Color(0xFF101276),
+                    ),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width,
+                      50.0,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        50.0,
+                      ),
+                    ),
+                    side: BorderSide(
+                      color: Color(0xFF101276),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                  top: 10.0,
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 1.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 15.0,
+                        right: 15.0,
+                      ),
+                      child: Text(
+                        "หรือ",
+                        style: TextStyle(
+                          fontFamily: "Kanit",
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 1.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
